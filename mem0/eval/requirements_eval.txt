@@ -1,0 +1,6 @@
+# Mem0 LoCoMo 评估依赖
+# 在 mem0 仓库根目录执行: pip install -e ".[vector_stores,llms,extras]"
+# 然后: pip install tqdm ollama
+# sentence-transformers 已包含在 extras 中（用于 BAAI/bge-m3）
+tqdm>=4.60.0
+ollama>=0.1.0

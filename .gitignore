@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment / secrets
+.env
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+.jbeval/
+*.iml
+
+# Experiment results & outputs
+results/
+**/results/
+**/.qdrant_run/
+**/.qdrant/
+**/qdrant_storage/
+
+# Large dataset files (download separately)
+**/data/ruler/
+**/data/hotpotqa/
+**/data/longmemeval_s/
+**/data/ruler_128k/
+
+# Large data / model cache
+*.bin
+*.pt
+*.safetensors
+huggingface/
+.cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log

@@ -1,0 +1,12 @@
+# LoCoMo 评估与 Bedrock 测评脚本依赖
+# eval_locomo.py / locomo_eval_bedrock.py + mem0/evaluation/metrics
+
+boto3>=1.34.0
+nltk>=3.8
+rouge-score>=0.1.2
+bert-score>=0.3.13
+sentence-transformers>=2.2.0
+tqdm>=4.66.0
+
+# mem0 evaluation 可选（evals.py 的 LLM judge、openai predict）
+openai>=1.0.0
