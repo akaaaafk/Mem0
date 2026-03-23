@@ -18,8 +18,7 @@ mem0/
 │   ├── metrics/            # F1 / BLEU scoring
 │   ├── data/locomo/        # LoCoMo dataset
 │   └── run_experiments.py  # Main experiment runner
-├── mem0/                   # mem0 Python package (core library)
-└── scratch/                # Standalone prototype scripts (archived)
+└── mem0/                   # mem0 Python package (core library)
 ```
 
 ---
@@ -126,25 +125,4 @@ python -m evaluation.score_results --input_folder ./results/locomo
 
 # LoCoMo full score breakdown (F1 by category)
 python -m evaluation.run_experiments --method search --score --output_folder ./results/locomo
-```
-
----
-
-## Scratch Scripts (`scratch/`)
-
-Standalone prototype scripts kept for reference. **Not part of the main pipeline.**
-
-| Script | Description |
-|---|---|
-| `eval_locomo.py` | Bedrock InvokeModel direct eval from pre-built memory files |
-| `locomo_eval_bedrock.py` | Bedrock Converse API eval from pre-built memory files |
-| `eval_locomo_ollama_full.py` | Full local pipeline — Ollama LLM + embeddings + FAISS, no mem0 |
-| `eval_locomo_add_local_eval_bedrock.py` | Hybrid — local Ollama add, Bedrock search/answer |
-| `eval_locomo_mem0_full.py` | Full mem0 pipeline with Bedrock (add + search via mem0 library) |
-
-Run from the repo root (`e:\mem0\`):
-
-```bash
-python mem0/scratch/locomo_eval_bedrock.py --dataset mem0/evaluation/data/locomo/locomo10.json
-python mem0/scratch/eval_locomo_ollama_full.py --method both --max-samples 1 --max-questions 5
 ```
