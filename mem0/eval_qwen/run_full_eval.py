@@ -1,9 +1,8 @@
-"""
-一键跑 LoCoMo 评估（兼容旧用法，实际调用 run_locomo）。
-用法（在 mem0_1 目录下）:
-  python -m eval_qwen.run_full_eval
-  python -m eval_qwen.run_full_eval --max_questions 50
-"""
+# Usage (run from mem0/):
+#   python -m eval_qwen.run_full_eval
+#   python -m eval_qwen.run_full_eval --max_questions 50
+# Alias for run_locomo — kept for backward compatibility.
+import os
 import subprocess
 import sys
 

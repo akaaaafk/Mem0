@@ -1,10 +1,7 @@
-"""
-HotpotQA 数据集评估（follow GAM，Tinker + Qwen）。
-输出目录：eval_qwen/results/hotpotqa/
-接入数据与流程后在此实现；当前为占位。
-用法（在 mem0_1 目录下）:
-  python -m eval_qwen.run_hotpotqa
-"""
+# Usage (run from mem0/):
+#   python -m eval_qwen.run_hotpotqa
+# Results: eval_qwen/results/hotpotqa/
+# Status: stub — HotpotQA pipeline not yet implemented.
 import argparse
 import os
 import sys
@@ -26,16 +23,16 @@ def _load_env():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="eval_qwen: HotpotQA 评估 (follow GAM)")
-    parser.add_argument("--output_folder", type=str, default=None, help="结果目录，默认 eval_qwen/results/hotpotqa")
+    parser = argparse.ArgumentParser(description="eval_qwen: HotpotQA (stub)")
+    parser.add_argument("--output_folder", type=str, default=None,
+                        help="results dir (default: eval_qwen/results/hotpotqa)")
     args = parser.parse_args()
 
     _load_env()
 
-    # TODO: 按 GAM 协议接入 HotpotQA 数据与 add_then_search + score 流程
-    # 输出与 locomo 一致：time, log, f1, bleu, 花费 → results/hotpotqa/
-    print("[run_hotpotqa] 未接入：请配置 HotpotQA 数据与脚本（follow GAM）后在此实现")
-    print("[Eval summary] context_window_peak=N/A | running_time=N/A | n_questions=0 | overall_f1=N/A | overall_bleu1=N/A | estimated_cost=N/A (HotpotQA not implemented)")
+    # TODO: implement HotpotQA add_then_search + score pipeline
+    print("[run_hotpotqa] not implemented")
+    print("[Eval summary] context_window_peak=N/A | running_time=N/A | n_questions=0 | overall_f1=N/A | overall_bleu1=N/A | estimated_cost=N/A")
     return 0
 
 
